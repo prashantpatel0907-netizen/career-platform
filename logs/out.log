@@ -1,0 +1,734 @@
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T10:28:40.589Z REQ-INCOMING GET / remote: ::1
+2025-09-17T10:28:40.590Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET / [32m200[0m 2.865 ms - 38[0m
+2025-09-17T10:28:57.602Z REQ-INCOMING POST /api/auth/login remote: ::1
+2025-09-17T10:28:57.603Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '60',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+2025-09-17T10:28:57.613Z login-start
+2025-09-17T10:28:57.613Z login-find-user local-employer@demo.com
+2025-09-17T10:28:57.638Z login-find-user-done true
+2025-09-17T10:28:57.742Z login-success new ObjectId("68ca6cc5bc22e3ec5c6b241c")
+[0mPOST /api/auth/login [32m200[0m 140.030 ms - 355[0m
+2025-09-17T10:29:13.361Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T10:29:13.361Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet [33m401[0m 0.867 ms - 63[0m
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T10:50:06.582Z REQ-INCOMING GET / remote: ::1
+2025-09-17T10:50:06.583Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET / [32m200[0m 2.672 ms - 38[0m
+2025-09-17T10:50:06.634Z REQ-INCOMING GET / remote: ::1
+2025-09-17T10:50:06.634Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET / [32m200[0m 0.863 ms - 38[0m
+2025-09-17T10:50:44.568Z REQ-INCOMING GET / remote: ::1
+2025-09-17T10:50:44.568Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET / [32m200[0m 0.417 ms - 38[0m
+2025-09-17T10:50:44.612Z REQ-INCOMING GET / remote: ::1
+2025-09-17T10:50:44.612Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET / [32m200[0m 0.548 ms - 38[0m
+2025-09-17T10:58:04.783Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T10:58:04.783Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '517',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+Razorpay webhook event: payment.captured
+[0mPOST /api/payments/razorpay/webhook [32m200[0m 2.508 ms - 38[0m
+2025-09-17T11:08:54.925Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T11:08:54.925Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '606',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [33m400[0m 1.572 ms - 303[0m
+2025-09-17T11:13:11.705Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T11:13:11.706Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '411',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [33m400[0m 0.742 ms - 303[0m
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T11:18:47.596Z REQ-INCOMING GET /api/payments/razorpay/webhook/debug-signature remote: ::1
+2025-09-17T11:18:47.599Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET /api/payments/razorpay/webhook/debug-signature [33m404[0m 7.444 ms - 184[0m
+2025-09-17T11:19:25.312Z REQ-INCOMING GET /api/payments/razorpay/webhook/debug-signature remote: ::1
+2025-09-17T11:19:25.312Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET /api/payments/razorpay/webhook/debug-signature [33m404[0m 0.904 ms - 184[0m
+2025-09-17T11:26:18.628Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T11:26:18.628Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '349',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [33m400[0m 3.642 ms - 303[0m
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T11:27:50.048Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T11:27:50.049Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '349',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [33m400[0m 4.749 ms - 303[0m
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T11:31:52.635Z REQ-INCOMING GET /api/payments/razorpay/webhook/debug-signature remote: ::1
+2025-09-17T11:31:52.636Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET /api/payments/razorpay/webhook/debug-signature [33m404[0m 3.015 ms - 184[0m
+2025-09-17T11:32:00.848Z REQ-INCOMING GET /api/payments/razorpay/webhook/debug-signature remote: ::1
+2025-09-17T11:32:00.848Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET /api/payments/razorpay/webhook/debug-signature [33m404[0m 0.929 ms - 184[0m
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T11:32:46.623Z REQ-INCOMING GET /api/payments/razorpay/webhook/debug-signature remote: ::1
+2025-09-17T11:32:46.624Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET /api/payments/razorpay/webhook/debug-signature [33m404[0m 3.117 ms - 184[0m
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T11:44:09.851Z REQ-INCOMING GET / remote: ::1
+2025-09-17T11:44:09.854Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET / [32m200[0m 9.368 ms - 38[0m
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T11:47:38.356Z REQ-INCOMING GET / remote: ::1
+2025-09-17T11:47:38.357Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET / [32m200[0m 2.490 ms - 38[0m
+2025-09-17T11:53:53.168Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T11:53:53.168Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '359',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [33m400[0m 2.919 ms - 29[0m
+2025-09-17T11:54:54.964Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T11:54:54.964Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '359',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [32m200[0m 0.865 ms - 32[0m
+Background: credited wallet 68ca6ea2bc22e3ec5c6b2436 amount 500 INR
+2025-09-17T11:55:19.295Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T11:55:19.295Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet [33m401[0m 1.863 ms - 63[0m
+2025-09-17T12:02:19.902Z REQ-INCOMING POST /api/auth/login remote: ::1
+2025-09-17T12:02:19.902Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '60',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+2025-09-17T12:02:19.911Z login-start
+2025-09-17T12:02:19.911Z login-find-user local-employer@demo.com
+2025-09-17T12:02:19.934Z login-find-user-done true
+2025-09-17T12:02:20.035Z login-success new ObjectId("68ca6cc5bc22e3ec5c6b241c")
+[0mPOST /api/auth/login [32m200[0m 132.756 ms - 355[0m
+2025-09-17T12:05:53.452Z REQ-INCOMING POST /api/auth/login remote: ::1
+2025-09-17T12:05:53.452Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '60',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+2025-09-17T12:05:53.453Z login-start
+2025-09-17T12:05:53.453Z login-find-user local-employer@demo.com
+2025-09-17T12:05:53.468Z login-find-user-done true
+2025-09-17T12:05:53.552Z login-success new ObjectId("68ca6cc5bc22e3ec5c6b241c")
+[0mPOST /api/auth/login [32m200[0m 99.925 ms - 355[0m
+2025-09-17T12:06:09.918Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T12:06:09.919Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet [32m200[0m 37.677 ms - 1132[0m
+2025-09-17T12:07:20.918Z REQ-INCOMING POST /api/auth/login remote: ::1
+2025-09-17T12:07:20.919Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '60',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+2025-09-17T12:07:20.919Z login-start
+2025-09-17T12:07:20.919Z login-find-user local-employer@demo.com
+2025-09-17T12:07:20.935Z login-find-user-done true
+2025-09-17T12:07:21.023Z login-success new ObjectId("68ca6cc5bc22e3ec5c6b241c")
+[0mPOST /api/auth/login [32m200[0m 104.843 ms - 355[0m
+2025-09-17T12:15:12.653Z REQ-INCOMING POST /api/payments/razorpay/create-order remote: ::1
+2025-09-17T12:15:12.654Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '91',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/create-order [32m200[0m 868.973 ms - 306[0m
+2025-09-17T12:16:23.565Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T12:16:23.565Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '359',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [32m200[0m 0.674 ms - 32[0m
+Webhook: already processed pay_TEST_CREDIT_1
+2025-09-17T12:16:36.581Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T12:16:36.581Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet [32m200[0m 33.630 ms - 1132[0m
+2025-09-17T12:16:45.368Z REQ-INCOMING GET /api/wallet/transactions remote: ::1
+2025-09-17T12:16:45.368Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet/transactions [32m200[0m 45.323 ms - 950[0m
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T12:35:39.957Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T12:35:39.958Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '351',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [32m200[0m 4.596 ms - 32[0m
+Background: credited wallet 68ca6ea2bc22e3ec5c6b2436 amount 500 INR
+2025-09-17T12:38:42.440Z REQ-INCOMING GET / remote: ::1
+2025-09-17T12:38:42.440Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mGET / [36m304[0m 1.295 ms - -[0m
+2025-09-17T12:38:42.443Z REQ-INCOMING GET / remote: ::1
+2025-09-17T12:38:42.444Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mGET / [36m304[0m 0.764 ms - -[0m
+2025-09-17T12:39:52.752Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T12:39:52.752Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '353',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [32m200[0m 0.844 ms - 32[0m
+Background: credited wallet 68ca6ea2bc22e3ec5c6b2436 amount 500 INR
+2025-09-17T12:44:01.318Z REQ-INCOMING GET / remote: ::1
+2025-09-17T12:44:01.318Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET / [32m200[0m 0.316 ms - 38[0m
+2025-09-17T12:44:45.692Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T12:44:45.692Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet [32m200[0m 45.916 ms - 1731[0m
+2025-09-17T12:44:53.219Z REQ-INCOMING GET /api/wallet/transactions?page=1&limit=20 remote: ::1
+2025-09-17T12:44:53.219Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet/transactions?page=1&limit=20 [32m200[0m 47.564 ms - 1549[0m
+2025-09-17T12:50:10.802Z REQ-INCOMING GET / remote: ::1
+2025-09-17T12:50:10.802Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mGET / [32m200[0m 0.328 ms - 38[0m
+2025-09-17T12:50:10.853Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T12:50:10.853Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet [32m200[0m 49.003 ms - 1731[0m
+2025-09-17T12:50:10.952Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T12:50:10.952Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet [32m200[0m 44.195 ms - 1731[0m
+2025-09-17T12:50:11.052Z REQ-INCOMING GET /api/wallet/transactions?page=1&limit=5 remote: ::1
+2025-09-17T12:50:11.052Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'curl/7.55.1',
+  authorization: true
+}
+[0mGET /api/wallet/transactions?page=1&limit=5 [32m200[0m 45.928 ms - 1548[0m
+2025-09-17T13:52:00.542Z REQ-INCOMING GET / remote: ::1
+2025-09-17T13:52:00.542Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mGET / [36m304[0m 0.515 ms - -[0m
+2025-09-17T13:52:00.543Z REQ-INCOMING GET / remote: ::1
+2025-09-17T13:52:00.543Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mGET / [36m304[0m 0.381 ms - -[0m
+2025-09-17T13:55:53.102Z REQ-INCOMING POST /api/auth/login remote: ::1
+2025-09-17T13:55:53.102Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '60',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+2025-09-17T13:55:53.111Z login-start
+2025-09-17T13:55:53.111Z login-find-user local-employer@demo.com
+2025-09-17T13:55:53.135Z login-find-user-done true
+2025-09-17T13:55:53.233Z login-success new ObjectId("68ca6cc5bc22e3ec5c6b241c")
+[0mPOST /api/auth/login [32m200[0m 130.969 ms - 355[0m
+2025-09-17T13:56:18.912Z REQ-INCOMING OPTIONS /api/wallet remote: ::1
+2025-09-17T13:56:18.912Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mOPTIONS /api/wallet [32m204[0m 0.481 ms - 0[0m
+2025-09-17T13:56:18.915Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T13:56:18.915Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: true
+}
+[0mGET /api/wallet [32m200[0m 45.471 ms - 1731[0m
+2025-09-17T13:57:11.013Z REQ-INCOMING OPTIONS /api/wallet remote: ::1
+2025-09-17T13:57:11.013Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mOPTIONS /api/wallet [32m204[0m 0.254 ms - 0[0m
+2025-09-17T13:57:11.016Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T13:57:11.016Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: true
+}
+[0mGET /api/wallet [36m304[0m 43.433 ms - -[0m
+2025-09-17T13:57:16.983Z REQ-INCOMING OPTIONS /api/wallet remote: ::1
+2025-09-17T13:57:16.983Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mOPTIONS /api/wallet [32m204[0m 0.238 ms - 0[0m
+2025-09-17T13:57:16.985Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T13:57:16.985Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: true
+}
+[0mGET /api/wallet [36m304[0m 43.629 ms - -[0m
+2025-09-17T13:59:12.821Z REQ-INCOMING OPTIONS /api/wallet remote: ::1
+2025-09-17T13:59:12.822Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mOPTIONS /api/wallet [32m204[0m 0.175 ms - 0[0m
+2025-09-17T13:59:12.824Z REQ-INCOMING GET /api/wallet remote: ::1
+2025-09-17T13:59:12.824Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: true
+}
+[0mGET /api/wallet [36m304[0m 41.958 ms - -[0m
+2025-09-17T14:04:17.215Z REQ-INCOMING OPTIONS /api/payments/razorpay/create-order remote: ::1
+2025-09-17T14:04:17.215Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': undefined,
+  'content-length': undefined,
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mOPTIONS /api/payments/razorpay/create-order [32m204[0m 0.146 ms - 0[0m
+2025-09-17T14:04:17.217Z REQ-INCOMING POST /api/payments/razorpay/create-order remote: ::1
+2025-09-17T14:04:17.217Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '91',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/create-order [32m200[0m 796.807 ms - 306[0m
+2025-09-17T14:04:45.315Z REQ-INCOMING POST /api/payments/razorpay/create-order remote: ::1
+2025-09-17T14:04:45.315Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '91',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/create-order [32m200[0m 172.793 ms - 306[0m
+2025-09-17T14:07:47.952Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T14:07:47.953Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '349',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [33m400[0m 1.902 ms - 29[0m
+2025-09-17T14:08:45.683Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T14:08:45.683Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '349',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [33m400[0m 1.023 ms - 29[0m
+2025-09-17T14:17:56.015Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T14:17:56.015Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '353',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [33m400[0m 0.896 ms - 29[0m
+2025-09-17T14:21:40.852Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T14:21:40.852Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '353',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [33m400[0m 1.012 ms - 29[0m
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+ENV-VALIDATION { ok: true, env: 'production', missing: [] }
+Mounted ./routes/auth -> /api/auth
+Mounted ./routes/jobs -> /api/jobs
+Mounted ./routes/wallet -> /api/wallet
+Mounted ./routes/notifications -> /api/notifications
+Mounted ./routes/payments_razorpay -> /api/payments/razorpay
+Mounted ./routes/applications -> /api/applications
+Mounted ./routes/users -> /api/users
+Mounted ./routes/payments_sim -> /api/payments/simulate
+Mounted ./routes/employer_jobs -> /api/employer/jobs
+Mounted ./routes/admin -> /api/admin
+Mounted ./routes/debug -> /api/debug
+API listening on http://localhost:4000
+MongoDB connected
+2025-09-17T14:47:51.269Z REQ-INCOMING POST /api/payments/razorpay/webhook remote: ::1
+2025-09-17T14:47:51.270Z REQ-HDRS {
+  host: 'localhost:4000',
+  'content-type': 'application/json',
+  'content-length': '353',
+  'user-agent': 'curl/7.55.1',
+  authorization: false
+}
+[0mPOST /api/payments/razorpay/webhook [32m200[0m 4.559 ms - 32[0m
+Webhook: already processed pay_TEST_FINAL

@@ -1,0 +1,16 @@
+// models/User.js
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
+
+const userSchema = new Schema({
+  email: { type: String, required: true, unique: true },
+  password: { type: String }, // password hash
+  passwordHash: { type: String, select: true },
+  role: { type: String, enum: ['worker','employer','admin'], default: 'worker' },
+  companyName: { type: String },
+  contactName: { type: String },
+  country: { type: String, default: '' },
+  demo: { type: Boolean, default: false }
+}, { timestamps: true });
+
+module.exports = mongoose.models.User || mongoose.model('User', userSchema);

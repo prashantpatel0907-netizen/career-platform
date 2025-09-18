@@ -1,0 +1,6 @@
+dev-data
+node_modules
+dev-data
+.env
+.DS_Store
+.vscode

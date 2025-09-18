@@ -1,0 +1,79 @@
+require('dotenv').config();
+const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
+const path = require('path');
+
+const connectDB = require('./utils/connect');
+const applications = require("./routes/applications");
+const applicationsRouter = require('./routes/applications');
+const usersRouter = require('./routes/users');
+const app = express();
+const employerJobsRoute = require('./routes/employer_jobs');
+const adminRoute = require('./routes/admin');
+const paymentsRoute = require("./routes/payments");
+const paymentsRaz = require('./routes/payments_razorpay');
+
+// Connect DB
+connectDB().then(() => console.log("MongoDB connected")).catch(err => {
+  console.error("DB connect failed", err);
+});
+
+// Middlewares
+app.use(morgan('dev'));
+app.use(cors());
+app.use(express.json());
+// near top of server.js - before app.use(express.json())
+app.use((req, res, next) => {
+  let data = [];
+  req.on('data', chunk => { data.push(chunk); });
+  req.on('end', () => {
+    if (data.length) req.rawBody = Buffer.concat(data).toString();
+    next();
+  });
+});
+// then use express.json() for usual endpoints
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/api/applications", applications);
+app.use('/api/applications', applicationsRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/applications', require('./routes/applications'));
+app.use('/api/payments/simulate', require('./routes/payments_sim'));
+app.use('/api/employer/jobs', employerJobsRoute);
+app.use('/api/admin', adminRoute);
+app.use('/api/payments/razorpay', paymentsRaz);
+app.use('/api/payments/razorpay', require('./routes/payments_razorpay'));
+app.use('/api/debug', require('./routes/debug'));
+
+// Serve static public/data if you put demo jsons there
+app.use('/data', express.static(path.join(__dirname, '..', 'app', 'public', 'data')));
+
+// Safe mount helper
+function safeMount(routePath, mountPoint) {
+  try {
+    const r = require(routePath);
+    app.use(mountPoint, r);
+    console.log(`Mounted ${routePath} -> ${mountPoint}`);
+  } catch (e) {
+    console.warn(`Route not mounted: ${routePath} -> ${mountPoint}  (${e.message})`);
+  }
+}
+
+safeMount('./routes/auth', '/api/auth');
+safeMount('./routes/jobs', '/api/jobs');
+safeMount('./routes/wallet', '/api/wallet');
+safeMount('./routes/notifications', '/api/notifications');
+safeMount('./routes/payments_razorpay', '/api/payments/razorpay');
+
+// health
+app.get('/', (req, res) => res.json({ ok: true, message: 'API is running' }));
+
+// global error
+app.use((err, req, res, next) => {
+  console.error(err?.stack || err);
+  res.status(500).json({ ok:false, error: err?.message || 'Internal server error' });
+});
+
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`API listening on http://localhost:${PORT}`));

@@ -1,0 +1,1 @@
+{"event":"payment.captured","payload":{"payment":{"entity":{"id":"pay_TEST_1","amount":250000,"currency":"INR","notes":{"ownerId":"68ca6cc5bc22e3ec5c6b241c","ownerType":"employer"}}}}}
